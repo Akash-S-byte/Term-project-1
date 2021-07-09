@@ -1,0 +1,175 @@
+body{
+    background-color: rgb(9, 245, 9);
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+.home{
+    display: grid;
+    /* grid:150px 150px/ auto auto auto ; */
+    /* justify-content:center;
+    align-content:center;
+    align-items: center; */
+    grid-template-areas: 'snake bird' 'fbby fbby' 'quizz quizz' 'quby quby';
+    /* justify-items: center; */
+    grid-column-gap: 50px;
+    grid-row-gap: 25px;
+    text-align: center;
+    width:fit-content;
+    height:fit-content;
+    margin:auto;
+    padding: 10px;
+}
+#totscore{
+    margin-left:1450px;
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 60px;
+    width: fit-content;
+}
+#title{
+    background-image:linear-gradient(135deg,red,purple,yellow);
+    width: fit-content;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    font-weight:bolder;
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+    text-align: center;
+    font-size: 50px;
+}
+div{
+    background-image: url();
+}
+#snake{
+    grid-area: snake;
+    text-align: center;
+    border-radius: 60px;
+    background-repeat: no-repeat;
+    background-image:url("https://images.ctfassets.net/d6skzop43my5/1lC7F7TRukFQLrppon2JxU/db50c525ff876db96469107e9b4a960d/press-release-snake.jpg?q=50");
+    background-size:100% 100%;
+    height:200px;
+    width:200px ;
+}
+#bird{
+    grid-area: bird;
+    text-align: center;
+    border-radius: 60px;
+    background-repeat: no-repeat;
+    background-image:url("https://img.flaticon.com/icons/png/512/891/891399.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF"),url("https://upload.wikimedia.org/wikipedia/en/thumb/0/0a/Flappy_Bird_icon.png/220px-Flappy_Bird_icon.png");
+    background-size:50px 50px,100% 100%;
+    background-position: center;
+    height:200px;
+    width:200px ;
+}
+#bird::after {
+    content: "";
+    opacity: 0.5;
+    
+    z-index: -1;   
+  }
+#quizz{
+    grid-area: quizz;
+    text-align: center;
+    border-radius: 60px;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    background-image:url("https://img.flaticon.com/icons/png/512/891/891399.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF"), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnW1XXeT1CWFLoHnvOgsX9UsoPXJevWIUeyw&usqp=CAU");
+    background-size:50px 50px,100% 100%;
+    background-position: center;
+    height:200px;
+    width:200px ;
+    margin: auto;
+}
+#quby{
+    grid-area:quby;
+    width: fit-content;
+    margin: auto;
+    justify-items: end;
+}
+#fbby{
+    margin-left:332px;
+    grid-area: fbby;
+    width: fit-content;
+}
+#snakeboard {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+#score {
+    text-align: center;
+    font-size: 140px;
+}
+.snakegame{
+    display: none;
+}
+.birdgame{
+    display: none;
+}
+.background {
+	height: 100vh;
+	width: 100vw;
+	background-color: skyblue;
+}
+#close,#closeb{
+    width:20px;
+    height: 20px;
+    border-radius: 50%;
+}
+#stagme{
+    margin:30% 0% 0% 48%
+}
+.bird {
+	height: 50px;
+	width: 50px;
+	position: fixed;
+    
+	top: 40vh;
+	left: 30vw;
+	z-index: 100;
+}
+
+.pipe_sprite {
+	position: fixed;
+	top: 40vh;
+	left: 100vw;
+	height: 70vh;
+	width: 6vw;
+	background-color: green;
+}
+
+.message {
+	position: fixed;
+	z-index: 10;
+	height: 10vh;
+	font-size: 10vh;
+	font-weight: 100;
+	color: black;
+	top: 12vh;
+	left: 20vw;
+	text-align: center;
+}
+
+.scoreb {
+	position: fixed;
+	z-index: 10;
+	height: 10vh;
+	font-size: 10vh;
+	font-weight: 100;
+	color: goldenrod;
+	top: 0;
+	left: 0;
+}
+
+.score_val {
+	color: gold;
+}
+
